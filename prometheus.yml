@@ -1,0 +1,30 @@
+# my global config
+global:
+  scrape_interval:     15s
+  evaluation_interval: 30s
+
+rule_files:
+  - prometheus.rules
+
+scrape_configs:
+  - job_name: prometheus
+    target_groups:
+      - targets: ['localhost:9090']
+  
+  - job_name: node
+    dns_sd_configs:
+    - refresh_interval: 15s
+      type: A
+      port: 9100
+      names:
+      - master.mesos
+      - slave.mesos
+  
+  - job_name: mesos
+    dns_sd_configs:
+    - refresh_interval: 15s
+      type: A
+      port: 9105
+      names:
+      - master.mesos
+      - slave.mesos

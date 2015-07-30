@@ -1,7 +1,7 @@
 notification_config {
   name: "default"
   pagerduty_config {
-    service_key: "supersecretapikey"
+    service_key: "{{ .Env "PAGERDUTY_KEY" }}"
   }
   email_config {
     email: "alert@example.com"

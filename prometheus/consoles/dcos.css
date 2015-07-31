@@ -1,0 +1,84 @@
+body {
+  background-color: #232937;
+  color: #fff;
+  font-weight: 100;
+  font-size: 200%;
+}
+
+.prom_console_rhs {
+    margin-right: 1em;
+}
+
+table {
+  background-color: grey;
+}
+
+th {
+  font-weight: 100;
+  background-color: #333;
+}
+
+.table-bordered {
+  border-color: #323a4e;
+}
+
+tr, td {
+  background-color: #222;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { 
+  font-weight: 100;
+}
+
+.navbar-inverse {
+  background-color: white;
+  // background-color: #282e3e;
+  border-color: #323a4e;
+}
+
+div.prom_lhs_menu {
+  background-color: #282e3e;
+}
+
+.alert-danger {
+  background-color: #222;
+}
+
+.prom_graph_table td {
+  background-color: #282e3e;
+}
+
+.rickshaw_graph .x_tick {
+  border-left: 1px dashed #848995
+}
+
+.rickshaw_graph .y_grid .tick {
+  stroke: #848995;
+  stroke-dasharray: 5 10;
+}
+
+a.prom_graph_link {
+  color: #fff;
+}
+
+
+li.prom_lhs_menu_selected {
+  background-color: rgba(147, 81, 229, 0.5)
+}
+
+a {
+  color: white
+}
+
+a::hover {
+  color: white;
+  text-decoration: underscore;
+}
+
+a.prom_query_drilldown {
+  color: #aaa;
+}
+
+::selection {
+  background-color: #9351e5
+}

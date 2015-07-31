@@ -4,7 +4,8 @@ RUN  apk --update add openssl \
      && wget -O - https://github.com/prometheus/alertmanager/releases/download/0.0.3/alertmanager-0.0.3.linux-amd64.tar.gz \
      |  tar -C /bin/ -xzf - \
      && wget -O - https://github.com/docker-infra/reefer/releases/download/v0.0.4/reefer.gz | zcat > /bin/reefer \
-     && chmod a+x /bin/reefer \
+     && wget -O - https://github.com/mesosphere/mesos-exporter/releases/download/v0.2/mesos-exporter-v0.2-amd64-linux.gz | zcat > /bin/mesos-exporter \
+     && chmod a+x /bin/reefer /bin/mesos-exporter \
      && apk del openssl
 ADD  . /etc
 RUN  promtool check-rules /etc/prometheus/prometheus.rules

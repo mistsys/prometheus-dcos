@@ -15,6 +15,10 @@ scrape_configs:
     target_groups:
     - targets: ['localhost:9093']
 
+  - job_name: mesos-master
+    target_groups:
+    - targets: ['localhost:9110']
+
   - job_name: node
     dns_sd_configs:
     - refresh_interval: 15s

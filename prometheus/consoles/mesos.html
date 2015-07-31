@@ -1,0 +1,50 @@
+{{ template "head" . }}
+
+{{ template "prom_content_head" . }}
+  <h3>Slave memory used</h3>
+  <div id="memUsedGraph"></div>
+  <script>
+  new PromConsole.Graph({
+    node: document.querySelector("#memUsedGraph"),
+    expr: "mesos_slave_mem_used",
+    yAxisFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yHoverFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yTitle: 'Bytes'
+  })
+  </script>
+
+  <h3>Slave cpus used</h3>
+  <div id="cpuUsedGraph"></div>
+  <script>
+  new PromConsole.Graph({
+    node: document.querySelector("#cpuUsedGraph"),
+    expr: "mesos_slave_cpus_used",
+    yAxisFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yHoverFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yTitle: 'Cores'
+  })
+  </script>
+
+  <h3>Slave disk used</h3>
+  <div id="diskUsedGraph"></div>
+  <script>
+  new PromConsole.Graph({
+    node: document.querySelector("#diskUsedGraph"),
+    expr: "mesos_slave_disk_used",
+    yAxisFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yHoverFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yTitle: 'Bytes'
+  })
+  </script>
+
+  <h3>Slave ports used</h3>
+  <div id="portUsedGraph"></div>
+  <script>
+  new PromConsole.Graph({
+    node: document.querySelector("#portUsedGraph"),
+    expr: "mesos_slave_ports_used",
+    yAxisFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yHoverFormatter: PromConsole.NumberFormatter.humanizeNoSmallPrefix,
+    yTitle: 'Ports'
+  })
+  </script>

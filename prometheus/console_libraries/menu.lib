@@ -61,6 +61,10 @@
 {{ template "_menuItem" (args . "cassandra.html" "Cassandra") }}
 {{ end }}
 
+{{ if query "up{job='mesos-master'}" }}
+{{ template "_menuItem" (args . "mesos.html" "Mesos") }}
+{{ end }}
+
 {{ if query "up{job='node'}" }}
 {{ template "_menuItem" (args . "node.html" "Node") }}
 {{ if match "^node" .Path }}

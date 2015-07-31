@@ -29,7 +29,7 @@
 {{ define "menu" }}
 <div class="prom_lhs_menu">
 <ul>
-{{ template "_menuItem" (args . "index.html.example" "Overview") }}
+{{ template "_menuItem" (args . "index.html" "Overview") }}
 
 {{ if query "up{job='haproxy'}" }}
 {{ template "_menuItem" (args . "haproxy.html" "HAProxy") }}
